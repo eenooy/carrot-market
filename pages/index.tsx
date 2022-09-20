@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         </div>
         <div className="relative  flex flex-col items-center -mt-10 -mb-5">
           <span className="text-lg font-medium">Tony Molloy</span>
-          <span className="text-sm text-gray-500">미국</span>
+          <span className="text-sm text-gray-500">미국  </span>
         </div>
       </div>
     </div>
