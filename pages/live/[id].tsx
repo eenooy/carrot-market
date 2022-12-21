@@ -28,7 +28,7 @@ const Stream: NextPage = () => {
                         <Message message="I want ￦20,000" reversed />
                         <Message message="미쳤어" />
                     </div>
-                    <div className="fixed py-2 bg-white  bottom-0 inset-x-0">
+                    <div className="fixed py-2 px-4 bg-white  bottom-0 inset-x-0">
                         <div className="flex relative max-w-md items-center  w-full mx-auto">
                             <input
                                 type="text"
