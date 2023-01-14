@@ -4,6 +4,7 @@ interface LoginForm {
     userName: string;
     email: string;
     password: string;
+    errors?: string;
 }
 
 export default function Forms() {
@@ -11,11 +12,15 @@ export default function Forms() {
         register,
         handleSubmit,
         formState: { errors },
+        watch,
+        setError,
+        setValue
     } = useForm<LoginForm>({
         mode: "onChange",
     });
     const onValid = (data: LoginForm) => {
         console.log("im valid");
+        setError("errors", { message: "Backend is offline sorry." })
     };
     const onInvalid = (errors: FieldErrors) => {
         console.log(errors);
@@ -33,6 +38,7 @@ export default function Forms() {
                 type="text"
                 placeholder="UserName"
             />
+            {errors.userName?.message}
             <input
                 {...register("email", {
                     required: "Email is reqired",
@@ -57,6 +63,7 @@ export default function Forms() {
                 type="submit"
                 value="Create Account"
             />
+            {errors.errors?.message}
         </form>
     );
 }
